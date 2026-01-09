@@ -1,0 +1,103 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+
+    display: flex;
+    align-items: center; /*Vertically Center Items*/
+    justify-content: space-between; /* Logo left, links right*/
+    background-color: transparent;
+    padding: 0 20px;
+    margin: 0;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 8px;
+    padding: 5px;
+}
+
+
+.brand a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.navbar.scrolled .brand a {
+    color: black;
+}
+
+
+.brand img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.navbar.scrolled .nav-links a {
+  color: black;
+}
+
+.nav-links a.active {
+    background-color:#c9908c;
+    color: white;
+}
+
+
+a:hover {
+    background: #b6b3b3;
+    text-decoration: none;
+
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 82, 82, 0.9);
+    height: 10vh;
+    justify-content: right;
+
+}
+
+footer p {
+    margin-top: 3rem;
+    color: black;
+}
